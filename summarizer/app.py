@@ -24,6 +24,7 @@ def extract_prescription(llm, cleaned_text):
         Your job is to extract the medicines and return them in JSON format containing the following keys: `patient` storing the patient name, `medicine` containing `name`, `dosage`, `duration` and `description` where name is the name of the medicine provided, dosage is the times the medicine should be consumed in a day, duration is the no of days the medicine should be consumed, description is a one liner description of the medicine, a key `tips` contains addition information provided by the doctor containing prohibited items and recommended items in a single paragraph and a key illness containing information about the illnesses patient has in a sentence with only names of illness.
         The keys should be only specified above, no change in spelling, keep them as specified.
         Remove any prefix like Mr., Ms., Mrs. etc before name (if exists).
+        Give "not specified" to any value which is noy given to you.
         Only return the valid JSON.
         ### VALID JSON (NO PREAMBLE):
         """
